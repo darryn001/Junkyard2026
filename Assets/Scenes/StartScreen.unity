@@ -272,7 +272,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5, y: -119.3}
+  m_AnchoredPosition: {x: 5, y: -180}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &691672616
@@ -426,12 +426,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Welcome to Junkyard
-
-    Find all the artefacts to unlock the secret to
-    humanity''s downfall
-
-'
+  m_text: "Welcome to Junkyard\nFind all the golden orbs to unlock each region's
+    gate and and complete the game! \n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ba673683adb13dd4dba5b0a4a9036b16, type: 2}
   m_sharedMaterial: {fileID: 7976656998850632983, guid: ba673683adb13dd4dba5b0a4a9036b16, type: 2}
@@ -796,13 +792,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1197504484}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.019195324, y: 0.014570272, z: 0.00027976235, w: 0.99970955}
+  m_LocalRotation: {x: -0.21641652, y: 0.014227521, z: 0.0031541637, w: 0.97619236}
   m_LocalPosition: {x: 749.2, y: 42, z: -56.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -2.2, y: 1.67, z: 0}
+  m_LocalEulerAnglesHint: {x: -25, y: 1.67, z: 0}
 --- !u!114 &1197504488
 MonoBehaviour:
   m_ObjectHideFlags: 0
