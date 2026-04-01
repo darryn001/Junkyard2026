@@ -45455,7 +45455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11aa90019637b3d4bb2725c3ecf7c934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.3
+  moveSpeed: 0.4
   jumpHeight: 0.05
   gravity: -9.81
   crouchHeight: 1
