@@ -21,9 +21,7 @@ public class PlayerController : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
 
-        // Locks mouse to center and hides it
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        
     }
 
     
@@ -47,7 +45,8 @@ public class PlayerController : MonoBehaviour
         right.Normalize();
 
         // Calculate direction based on camera orientation
-        Vector3 moveDirection = (forward * moveInput.y + right * moveInput.x).normalized;
+        float forwardInput = Mathf.Clamp(moveInput.y, 0f, 1f);
+        Vector3 moveDirection = (forward * forwardInput + right * moveInput.x).normalized;
 
         // Move the player using moveSpeed (the float)
         controller.Move(moveDirection * moveSpeed * Time.deltaTime);
@@ -56,7 +55,7 @@ public class PlayerController : MonoBehaviour
         if (moveDirection != Vector3.zero)
         {
             Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 10f);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 2f);
         }
 
         // Apply Gravity
