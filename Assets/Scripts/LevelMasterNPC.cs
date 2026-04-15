@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-
 public class LevelMasterNPC : MonoBehaviour
 {
     public Button submitButton;
@@ -31,20 +30,26 @@ public class LevelMasterNPC : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-            uiPanel.SetActive(true);
-            submitButton.onClick.AddListener(OnSubmitCode); // wire THIS npc to the button
-        }
+        if (!other.CompareTag("Player")) return;
+
+        // Wipe ALL listeners from previous NPCs before wiring this one
+        submitButton.onClick.RemoveAllListeners();
+        submitButton.onClick.AddListener(OnSubmitCode);
+
+        // Reset UI state fresh for this NPC
+        codeInputField.text = "";
+        errorMessage.gameObject.SetActive(false);
+        successMessage.gameObject.SetActive(false);
+
+        uiPanel.SetActive(true);
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-            uiPanel.SetActive(false);
-            submitButton.onClick.RemoveListener(OnSubmitCode); // unwire when player leaves
-        }
+        if (!other.CompareTag("Player")) return;
+
+        uiPanel.SetActive(false);
+        submitButton.onClick.RemoveAllListeners();
     }
 
     public void OnSubmitCode()
@@ -55,7 +60,7 @@ public class LevelMasterNPC : MonoBehaviour
         {
             errorMessage.gameObject.SetActive(false);
             successMessage.gameObject.SetActive(true);
-            Invoke("OpenGateAndClosePanel", 2f);
+            Invoke(nameof(OpenGateAndClosePanel), 2f);
         }
         else
         {
@@ -66,14 +71,9 @@ public class LevelMasterNPC : MonoBehaviour
     private void OpenGateAndClosePanel()
     {
         uiPanel.SetActive(false);
-
         if (winPanel != null)
-        {
             winPanel.SetActive(true);
-        }
         else
-        {
             gateToOpen.Open();
-        }
     }
 }

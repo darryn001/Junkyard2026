@@ -8102,7 +8102,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 1
-  m_Color: {r: 0.6528301, g: 0.6528301, b: 0.6528301, a: 0.39215687}
+  m_Color: {r: 0.4188679, g: 0.4188679, b: 0.4188679, a: 0.39215687}
   m_Intensity: 2
   m_Range: 10
   m_SpotAngle: 30
@@ -8146,7 +8146,7 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_ColorTemperature: 5869
+  m_ColorTemperature: 5537
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
@@ -11942,7 +11942,7 @@ RectTransform:
   m_GameObject: {fileID: 666127433}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 905968576}
@@ -15769,21 +15769,24 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'W (Forward)
 
-    S (Back)
+    A (Left)
 
-    Cursor (Left/Right)
+    D (Right)
 
-    E (Interact)'
+    E (Interact)
+
+    Space
+    Bar (Jump)'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ba673683adb13dd4dba5b0a4a9036b16, type: 2}
-  m_sharedMaterial: {fileID: 7976656998850632983, guid: ba673683adb13dd4dba5b0a4a9036b16, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6e5a780025868ea429e2d757e1d9a943, type: 2}
+  m_sharedMaterial: {fileID: -3899025243981979287, guid: 6e5a780025868ea429e2d757e1d9a943, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4282552232
+  m_fontColor: {r: 0.65882355, g: 0.5608164, b: 0.25882354, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -15800,13 +15803,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.51
-  m_fontSizeBase: 18.51
+  m_fontSize: 25.5
+  m_fontSizeBase: 25.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -19122,7 +19125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b07f7dff96ebdc49b117dd92240b2c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  submitButton: {fileID: 0}
+  submitButton: {fileID: 666127435}
   winPanel: {fileID: 0}
   gateToOpen: {fileID: 2007657464}
   correctCode: 0000
@@ -28498,7 +28501,7 @@ RectTransform:
   m_GameObject: {fileID: 1771981009}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.98, y: 2.08, z: 1}
+  m_LocalScale: {x: 2.3, y: 2.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1825412870}
