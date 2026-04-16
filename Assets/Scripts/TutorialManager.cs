@@ -13,7 +13,7 @@ public class TutorialManager : MonoBehaviour
     }
 
     [Header("UI Reference")]
-    public TextMeshProUGUI tutorialText; // Drag your TMP object here
+    public TextMeshProUGUI tutorialText;
 
     [Header("Settings")]
     public float intervalBetweenPrompts = 2f;
@@ -21,14 +21,15 @@ public class TutorialManager : MonoBehaviour
 
     private void Start()
     {
-        // Set text to invisible at start
+#if UNITY_EDITOR
+        ResetAllPrompts(); // Always show prompts fresh during Editor playtesting
+#endif
+
         if (tutorialText != null)
         {
             Color c = tutorialText.color;
             c.a = 0f;
             tutorialText.color = c;
-
-            // This is the code version of unchecking "Raycast Target"
             tutorialText.raycastTarget = false;
         }
 
@@ -84,6 +85,7 @@ public class TutorialManager : MonoBehaviour
         tutorialText.color = c;
     }
 
+    [ContextMenu("Reset All Tutorial Prompts")]
     public void ResetAllPrompts()
     {
         foreach (var prompt in prompts)

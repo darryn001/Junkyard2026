@@ -14304,7 +14304,7 @@ MonoBehaviour:
   intervalBetweenPrompts: 2
   prompts:
   - key: move
-    message: Use WSAD to move
+    message: Use WASD to move
     displayDuration: 10
   - key: code
     message: find the hidden code
