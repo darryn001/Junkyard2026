@@ -1172,6 +1172,142 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b9bcea006c4574b8541918add2ca79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &69350284
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 69350285}
+  - component: {fileID: 69350287}
+  - component: {fileID: 69350286}
+  m_Layer: 5
+  m_Name: NarrationText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &69350285
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69350284}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1536221450}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -416}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &69350286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69350284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: New Text
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: ba673683adb13dd4dba5b0a4a9036b16, type: 2}
+  m_sharedMaterial: {fileID: 7976656998850632983, guid: ba673683adb13dd4dba5b0a4a9036b16, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4287477695
+  m_fontColor: {r: 0.7509433, g: 0.719581, b: 0.55399776, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 37.36
+  m_fontSizeBase: 37.36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: -678.87366, y: 0, z: -713.8203, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &69350287
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69350284}
+  m_CullTransparentMesh: 1
 --- !u!1 &82424477
 GameObject:
   m_ObjectHideFlags: 0
@@ -6929,6 +7065,181 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 11.12208, y: 0.3009448, z: 2.1046517}
   m_Center: {x: -0.0000019073486, y: -0.0000019073486, z: 0}
+--- !u!1 &556389693
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 556389695}
+  - component: {fileID: 556389694}
+  m_Layer: 0
+  m_Name: NarrrationManagerObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &556389694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556389693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 615aeafce5aa79a4ead8e83f940f1c6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  narrationText: {fileID: 69350286}
+  audioSource: {fileID: 0}
+  typingSpeed: 0.04
+  intervalBetweenNarrations: 2
+  narrationPoints:
+  - key: DesertEntrance01
+    message: The first thing I noticed was the silence
+    audioClip: {fileID: 0}
+    worldPosition: {x: 2.83, y: 1.0535, z: 4.27}
+    triggerRadius: 0
+    displayDuration: 0
+    triggeredThisSession: 0
+  - key: DesertEntrance02
+    message: Not peace, just absence..
+    audioClip: {fileID: 0}
+    worldPosition: {x: 2.09, y: 1.0535, z: 4.38}
+    triggerRadius: 0
+    displayDuration: 0
+    triggeredThisSession: 0
+  - key: AbandonedVehicle01
+    message: People thought movement meant progress
+    audioClip: {fileID: 0}
+    worldPosition: {x: 3.76, y: 0, z: 0}
+    triggerRadius: 0
+    displayDuration: 0
+    triggeredThisSession: 0
+  - key: AbandonedVehicle02
+    message: No one asked where progress would end up.
+    audioClip: {fileID: 0}
+    worldPosition: {x: 4.12, y: 1.0535, z: 1.73}
+    triggerRadius: 0
+    displayDuration: 0
+    triggeredThisSession: 0
+  - key: VehicleToy01
+    message: Some of this was loved once.
+    audioClip: {fileID: 0}
+    worldPosition: {x: 3.69, y: 1.0535, z: 0.8}
+    triggerRadius: 0
+    displayDuration: 0
+    triggeredThisSession: 0
+  - key: VehicleToy02
+    message: Most of it was simply owned
+    audioClip: {fileID: 0}
+    worldPosition: {x: 3.57, y: 1.0535, z: 0.54}
+    triggerRadius: 0
+    displayDuration: 0
+    triggeredThisSession: 0
+  - key: IndustrialMachine01
+    message: Machines were built to replace effort
+    audioClip: {fileID: 0}
+    worldPosition: {x: 1.45, y: 0.0535, z: 0.082}
+    triggerRadius: 0
+    displayDuration: 0
+    triggeredThisSession: 0
+  - key: IndustrialMachine02
+    message: Eventually they replaced people too..
+    audioClip: {fileID: 0}
+    worldPosition: {x: 1.32, y: 1.0535, z: 0.54}
+    triggerRadius: 0
+    displayDuration: 0
+    triggeredThisSession: 0
+  - key: IndustrialMachine03
+    message: Some of them kept running, Long after no one remained to need them.
+    audioClip: {fileID: 0}
+    worldPosition: {x: 0.56, y: 1.0535, z: 0.89}
+    triggerRadius: 0
+    displayDuration: 0
+    triggeredThisSession: 0
+  - key: ShippingContainer01
+    message: The world learned how to move everything
+    audioClip: {fileID: 0}
+    worldPosition: {x: 3.98, y: 1.05, z: 0}
+    triggerRadius: 0
+    displayDuration: 0
+    triggeredThisSession: 0
+  - key: ShippingContainer02
+    message: Except the weight of what it became
+    audioClip: {fileID: 0}
+    worldPosition: {x: 0, y: 0, z: 0}
+    triggerRadius: 0
+    displayDuration: 0
+    triggeredThisSession: 0
+  - key: Value
+    message: Value dissappears when no one's left to believe in it
+    audioClip: {fileID: 0}
+    worldPosition: {x: 0, y: 0, z: 0}
+    triggerRadius: 0
+    displayDuration: 0
+    triggeredThisSession: 0
+  - key: FinalArtefact01
+    message: There was no single ending
+    audioClip: {fileID: 0}
+    worldPosition: {x: 0, y: 0, z: 0}
+    triggerRadius: 0
+    displayDuration: 0
+    triggeredThisSession: 0
+  - key: FinalArtefact02
+    message: Only thousands of small choices
+    audioClip: {fileID: 0}
+    worldPosition: {x: 0, y: 0, z: 0}
+    triggerRadius: 0
+    displayDuration: 0
+    triggeredThisSession: 0
+  - key: NatureReclaim01
+    message: When we finally left...
+    audioClip: {fileID: 0}
+    worldPosition: {x: 0, y: 0, z: 0}
+    triggerRadius: 0
+    displayDuration: 0
+    triggeredThisSession: 0
+  - key: NatureReclaim02
+    message: The world began again without us
+    audioClip: {fileID: 0}
+    worldPosition: {x: 0, y: 0, z: 0}
+    triggerRadius: 0
+    displayDuration: 0
+    triggeredThisSession: 0
+  - key: FinalOverlook01
+    message: The desert kept everything
+    audioClip: {fileID: 0}
+    worldPosition: {x: 0, y: 0, z: 0}
+    triggerRadius: 0
+    displayDuration: 0
+    triggeredThisSession: 0
+  - key: FinalOverlook02
+    message: Even the things we tried to forget
+    audioClip: {fileID: 0}
+    worldPosition: {x: 0, y: 0, z: 0}
+    triggerRadius: 0
+    displayDuration: 0
+    triggeredThisSession: 0
+--- !u!4 &556389695
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556389693}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -574.32214, y: -454.96017, z: -40.40952}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1488503004}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &578657152
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11008,7 +11319,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 739496162}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1394129382}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -14339,16 +14650,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1199452587}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.17600012}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -41.135647}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1394129382}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.068, y: 0.9819}
+  m_AnchoredPosition: {x: -575.4215, y: -455.07242}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1203638088
@@ -16781,6 +17092,39 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: bc84bc3e95ede6f47a9e34322599b6d2, type: 3}
   m_PrefabInstance: {fileID: 1373616950}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1394129381
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1394129382}
+  m_Layer: 0
+  m_Name: TutorialSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1394129382
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394129381}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 578.4895, y: 456.05432, z: 41.311646}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1199452591}
+  - {fileID: 997724661}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1407972237
 Mesh:
   m_ObjectHideFlags: 0
@@ -17885,6 +18229,39 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 88b2a7cf008a972478cbe9619b4f590e, type: 3}
   m_PrefabInstance: {fileID: 1473237728}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1488503003
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1488503004}
+  m_Layer: 0
+  m_Name: NarrationSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1488503004
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488503003}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 578.4895, y: 456.05432, z: 41.311646}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 556389695}
+  - {fileID: 1536221450}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1522176961
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18295,6 +18672,108 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.94, y: 1.73, z: 3.95}
   m_Center: {x: 0, y: 0.46, z: 0}
+--- !u!1 &1536221446
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1536221450}
+  - component: {fileID: 1536221449}
+  - component: {fileID: 1536221448}
+  - component: {fileID: 1536221447}
+  m_Layer: 5
+  m_Name: NarrationCanvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1536221447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536221446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1536221448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536221446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &1536221449
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536221446}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &1536221450
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536221446}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 69350285}
+  m_Father: {fileID: 1488503004}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &1541532146
 GameObject:
   m_ObjectHideFlags: 0
@@ -26076,5 +26555,5 @@ SceneRoots:
   - {fileID: 167539753}
   - {fileID: 1680946244}
   - {fileID: 1423205959}
-  - {fileID: 1199452591}
-  - {fileID: 997724661}
+  - {fileID: 1488503004}
+  - {fileID: 1394129382}
