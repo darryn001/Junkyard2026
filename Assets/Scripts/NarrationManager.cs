@@ -27,9 +27,11 @@ public class NarrationManager : MonoBehaviour
 
     [Header("Settings")]
     public float intervalBetweenNarrations = 2f;
+    public float narrationSpeedMultiplier = 0.15f;
     public NarrationPoint[] narrationPoints;
 
     private Transform _player;
+    private PlayerController _playerController;
     private bool _isPlaying;
 
     private void Start()
@@ -39,6 +41,7 @@ public class NarrationManager : MonoBehaviour
 #endif
 
         _player = GameObject.FindWithTag("Player").transform;
+        _playerController = _player.GetComponent<PlayerController>();
 
         if (narrationText != null)
         {
@@ -75,37 +78,28 @@ public class NarrationManager : MonoBehaviour
     private IEnumerator PlayNarration(NarrationPoint point)
     {
         _isPlaying = true;
+        if (_playerController != null) _playerController.speedMultiplier = narrationSpeedMultiplier;
 
         yield return StartCoroutine(ShowMessage(point));
-        yield return new WaitForSeconds(intervalBetweenNarrations);
 
+        if (_playerController != null) _playerController.speedMultiplier = 1f;
         _isPlaying = false;
+
+        yield return new WaitForSeconds(intervalBetweenNarrations);
     }
 
     private IEnumerator ShowMessage(NarrationPoint point)
     {
-        narrationText.text = point.message;
-        SetTextAlpha(0f);
+        narrationText.text = "";
+        SetTextAlpha(1f);
 
-        // Play audio if assigned
         if (audioSource != null && point.audioClip != null)
         {
             audioSource.clip = point.audioClip;
             audioSource.Play();
         }
 
-        // Fade In
-        float t = 0f;
-        while (t < 1f)
-        {
-            t += Time.deltaTime * 2f;
-            SetTextAlpha(Mathf.Clamp01(t));
-            yield return null;
-        }
-        SetTextAlpha(1f);
-
         // Typewriter
-        narrationText.text = "";
         foreach (char letter in point.message)
         {
             narrationText.text += letter;
@@ -116,7 +110,7 @@ public class NarrationManager : MonoBehaviour
         yield return new WaitForSeconds(point.displayDuration);
 
         // Fade Out
-        t = 1f;
+        float t = 1f;
         while (t > 0f)
         {
             t -= Time.deltaTime * 2f;
@@ -127,7 +121,7 @@ public class NarrationManager : MonoBehaviour
         if (audioSource != null && audioSource.isPlaying)
             audioSource.Stop();
 
-        SetTextAlpha(1f);
+        SetTextAlpha(0f);
         narrationText.text = "";
 
         PlayerPrefs.SetInt(point.key, 1);

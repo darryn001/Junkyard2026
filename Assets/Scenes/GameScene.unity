@@ -1229,7 +1229,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ba673683adb13dd4dba5b0a4a9036b16, type: 2}
   m_sharedMaterial: {fileID: 7976656998850632983, guid: ba673683adb13dd4dba5b0a4a9036b16, type: 2}
@@ -7098,132 +7098,87 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   typingSpeed: 0.04
   intervalBetweenNarrations: 2
+  narrationSpeedMultiplier: 0.4
   narrationPoints:
   - key: DesertEntrance01
-    message: The first thing I noticed was the silence
+    message: the first thing I noticed was the silence
     audioClip: {fileID: 0}
     worldPosition: {x: 2.83, y: 1.0535, z: 4.27}
-    triggerRadius: 0
-    displayDuration: 0
+    triggerRadius: 0.25
+    displayDuration: 3
     triggeredThisSession: 0
   - key: DesertEntrance02
-    message: Not peace, just absence..
+    message: not peace, just absence..
     audioClip: {fileID: 0}
     worldPosition: {x: 2.09, y: 1.0535, z: 4.38}
-    triggerRadius: 0
-    displayDuration: 0
+    triggerRadius: 0.25
+    displayDuration: 3
     triggeredThisSession: 0
   - key: AbandonedVehicle01
-    message: People thought movement meant progress
+    message: people thought movement meant progress
     audioClip: {fileID: 0}
     worldPosition: {x: 3.76, y: 0, z: 0}
-    triggerRadius: 0
-    displayDuration: 0
+    triggerRadius: 0.25
+    displayDuration: 3
     triggeredThisSession: 0
   - key: AbandonedVehicle02
-    message: No one asked where progress would end up.
+    message: no one asked where progress would end up
     audioClip: {fileID: 0}
     worldPosition: {x: 4.12, y: 1.0535, z: 1.73}
-    triggerRadius: 0
-    displayDuration: 0
+    triggerRadius: 0.25
+    displayDuration: 3
     triggeredThisSession: 0
-  - key: VehicleToy01
-    message: Some of this was loved once.
+  - key: VehicleToy
+    message: some of this was loved once, most of it was simply owned
     audioClip: {fileID: 0}
     worldPosition: {x: 3.69, y: 1.0535, z: 0.8}
-    triggerRadius: 0
-    displayDuration: 0
+    triggerRadius: 0.25
+    displayDuration: 3
     triggeredThisSession: 0
-  - key: VehicleToy02
-    message: Most of it was simply owned
+  - key: IndustrialMachine
+    message: machines were built to replace effort, eventually they replaced people
+      too..
     audioClip: {fileID: 0}
-    worldPosition: {x: 3.57, y: 1.0535, z: 0.54}
-    triggerRadius: 0
-    displayDuration: 0
+    worldPosition: {x: 0.73, y: 1.0535, z: 1.28}
+    triggerRadius: 0.3
+    displayDuration: 3
     triggeredThisSession: 0
-  - key: IndustrialMachine01
-    message: Machines were built to replace effort
+  - key: ShippingContainer
+    message: the world learned how to move everything, except the weight of what
+      it became
     audioClip: {fileID: 0}
-    worldPosition: {x: 1.45, y: 0.0535, z: 0.082}
-    triggerRadius: 0
-    displayDuration: 0
-    triggeredThisSession: 0
-  - key: IndustrialMachine02
-    message: Eventually they replaced people too..
-    audioClip: {fileID: 0}
-    worldPosition: {x: 1.32, y: 1.0535, z: 0.54}
-    triggerRadius: 0
-    displayDuration: 0
-    triggeredThisSession: 0
-  - key: IndustrialMachine03
-    message: Some of them kept running, Long after no one remained to need them.
-    audioClip: {fileID: 0}
-    worldPosition: {x: 0.56, y: 1.0535, z: 0.89}
-    triggerRadius: 0
-    displayDuration: 0
-    triggeredThisSession: 0
-  - key: ShippingContainer01
-    message: The world learned how to move everything
-    audioClip: {fileID: 0}
-    worldPosition: {x: 3.98, y: 1.05, z: 0}
-    triggerRadius: 0
-    displayDuration: 0
-    triggeredThisSession: 0
-  - key: ShippingContainer02
-    message: Except the weight of what it became
-    audioClip: {fileID: 0}
-    worldPosition: {x: 0, y: 0, z: 0}
-    triggerRadius: 0
-    displayDuration: 0
+    worldPosition: {x: 4.01, y: 1.0535, z: 2.68}
+    triggerRadius: 0.25
+    displayDuration: 3
     triggeredThisSession: 0
   - key: Value
-    message: Value dissappears when no one's left to believe in it
+    message: value dissappears when no one's left to believe in it
     audioClip: {fileID: 0}
-    worldPosition: {x: 0, y: 0, z: 0}
-    triggerRadius: 0
-    displayDuration: 0
+    worldPosition: {x: 1.72, y: 1.0535, z: 1.77}
+    triggerRadius: 0.3
+    displayDuration: 3
     triggeredThisSession: 0
-  - key: FinalArtefact01
-    message: There was no single ending
+  - key: FinalArtefact
+    message: there was no single ending, only thousands of small choices... only
+      thousands of small choices
     audioClip: {fileID: 0}
-    worldPosition: {x: 0, y: 0, z: 0}
-    triggerRadius: 0
-    displayDuration: 0
+    worldPosition: {x: 1.98, y: 1.0535, z: 0.57}
+    triggerRadius: 0.3
+    displayDuration: 3
     triggeredThisSession: 0
-  - key: FinalArtefact02
-    message: Only thousands of small choices
+  - key: NatureReclaim
+    message: when we finally left... the world began again without us
     audioClip: {fileID: 0}
-    worldPosition: {x: 0, y: 0, z: 0}
-    triggerRadius: 0
-    displayDuration: 0
-    triggeredThisSession: 0
-  - key: NatureReclaim01
-    message: When we finally left...
-    audioClip: {fileID: 0}
-    worldPosition: {x: 0, y: 0, z: 0}
-    triggerRadius: 0
-    displayDuration: 0
-    triggeredThisSession: 0
-  - key: NatureReclaim02
-    message: The world began again without us
-    audioClip: {fileID: 0}
-    worldPosition: {x: 0, y: 0, z: 0}
-    triggerRadius: 0
-    displayDuration: 0
+    worldPosition: {x: 1.16, y: 1.0535, z: 3.11}
+    triggerRadius: 0.3
+    displayDuration: 3
     triggeredThisSession: 0
   - key: FinalOverlook01
-    message: The desert kept everything
+    message: the desert kept everything, even the things we tried to forget
     audioClip: {fileID: 0}
-    worldPosition: {x: 0, y: 0, z: 0}
-    triggerRadius: 0
-    displayDuration: 0
-    triggeredThisSession: 0
-  - key: FinalOverlook02
-    message: Even the things we tried to forget
-    audioClip: {fileID: 0}
-    worldPosition: {x: 0, y: 0, z: 0}
-    triggerRadius: 0
-    displayDuration: 0
+    worldPosition: {x: 0.64, y: 1.0535, z: 3.75}
+    triggerRadius: 0.3
+    displayDuration: 3
     triggeredThisSession: 0
 --- !u!4 &556389695
 Transform:
@@ -8836,7 +8791,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 65}
+  m_AnchoredPosition: {x: -40, y: 65}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &739496163
@@ -8869,7 +8824,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.48235294}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -14616,13 +14571,13 @@ MonoBehaviour:
   prompts:
   - key: move
     message: Use WASD to move
-    displayDuration: 10
+    displayDuration: 3
   - key: code
     message: find the hidden code
-    displayDuration: 10
+    displayDuration: 4
   - key: NPC
     message: deliver the code to the gate master
-    displayDuration: 10
+    displayDuration: 4
 --- !u!225 &1199452589
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -15324,6 +15279,7 @@ MonoBehaviour:
   gravity: -8
   crouchHeight: 1
   standingHeight: 2
+  speedMultiplier: 1
 --- !u!143 &1249717456
 CharacterController:
   m_ObjectHideFlags: 0
@@ -18244,7 +18200,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1488503004
 Transform:
   m_ObjectHideFlags: 0
