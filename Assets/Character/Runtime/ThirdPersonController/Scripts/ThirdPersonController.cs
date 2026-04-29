@@ -17,7 +17,8 @@ namespace StarterAssets
         public float SprintSpeed = 5.335f;
 
         [Range(0.0f, 0.3f)]
-        public float RotationSmoothTime = 0.12f;
+        public float RotationSmoothTime = 0.005f; // FIX: was 0.12f — increased for slower, smoother turning
+
         public float SpeedChangeRate = 10.0f;
 
         public AudioClip LandingAudioClip;
@@ -25,13 +26,13 @@ namespace StarterAssets
         [Range(0, 1)] public float FootstepAudioVolume = 0.5f;
 
         [Space(10)]
-        public float JumpHeight = 1.2f;
+        public float JumpHeight = 0.00001f; 
 
         [Tooltip("Scales the jump force down without touching gravity. Lower = smaller jump")]
         [Range(0.1f, 1.0f)]
-        public float JumpForceMultiplier = 0.5f;
+        public float JumpForceMultiplier = 0.3f; 
 
-        public float Gravity = -15.0f;
+        public float Gravity = -9.81f; 
 
         [Space(10)]
         public float JumpTimeout = 0.50f;
@@ -105,6 +106,7 @@ namespace StarterAssets
             if (CinemachineCameraTarget != null)
                 _cinemachineTargetYaw = CinemachineCameraTarget.transform.rotation.eulerAngles.y;
 
+            // FIX: _hasAnimator is set once in Start, not re-queried every Update frame
             _hasAnimator = TryGetComponent(out _animator);
             _input = GetComponent<StarterAssetsInputs>();
 
@@ -122,13 +124,9 @@ namespace StarterAssets
 
         private void Update()
         {
-            if (_controller != null && !_controller.enabled)
-            {
-                _controller.enabled = true;
-                Debug.LogWarning("CharacterController was disabled — re-enabling it.");
-            }
-
-            _hasAnimator = TryGetComponent(out _animator);
+            // FIX: removed TryGetComponent(_animator) from here — it caused a one-frame null gap
+            // and re-queried the component every single frame unnecessarily.
+            // _hasAnimator is reliably set in Start() and doesn't need to change at runtime.
 
             JumpAndGravity();
             GroundedCheck();

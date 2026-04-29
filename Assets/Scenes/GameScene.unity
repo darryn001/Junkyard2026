@@ -1840,6 +1840,135 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: f1c46e283923d3b4ca79c5661c5277f6, type: 3}
   m_PrefabInstance: {fileID: 103565162}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &125968906
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 125968908}
+  - component: {fileID: 125968907}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &125968907
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125968906}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 623671021e191d94ba573adc94f0613d, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.231
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 497.41
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.041666668
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &125968908
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125968906}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.4179916, y: 5.9149237, z: 35.045048}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &141080774
 GameObject:
   m_ObjectHideFlags: 0
@@ -4493,7 +4622,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.99991995, z: 0, w: 0.012653411}
-  m_LocalPosition: {x: 4.3710117, y: 1.12, z: 4.649987}
+  m_LocalPosition: {x: 4.3710117, y: 1.14, z: 4.649987}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7106,35 +7235,35 @@ MonoBehaviour:
   narrationPoints:
   - key: DesertEntrance01
     message: the first thing I noticed was the silence
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: aa8514c3b168d9e4eaa3a6bf12f1bdc9, type: 3}
     worldPosition: {x: 2.83, y: 1.0535, z: 4.27}
     triggerRadius: 0.25
     displayDuration: 3
     triggeredThisSession: 0
   - key: DesertEntrance02
     message: not peace, just absence..
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: ca6add87a018db448bda8829ce63cc4a, type: 3}
     worldPosition: {x: 2.09, y: 1.0535, z: 4.38}
     triggerRadius: 0.25
     displayDuration: 3
     triggeredThisSession: 0
   - key: AbandonedVehicle01
     message: people thought movement meant progress
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 176bd2c0868ec5644acc16766c98b806, type: 3}
     worldPosition: {x: 3.76, y: 0, z: 0}
     triggerRadius: 0.25
     displayDuration: 3
     triggeredThisSession: 0
   - key: AbandonedVehicle02
     message: no one asked where progress would end up
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: ed3f13eb87acd5b4ebf7a3bc57bd93c2, type: 3}
     worldPosition: {x: 4.12, y: 1.0535, z: 1.73}
     triggerRadius: 0.25
     displayDuration: 3
     triggeredThisSession: 0
   - key: VehicleToy
     message: some of this was loved once, most of it was simply owned
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 9fbdd69f62a03e345905c432bc5f0cc8, type: 3}
     worldPosition: {x: 3.69, y: 1.0535, z: 0.8}
     triggerRadius: 0.25
     displayDuration: 3
@@ -7142,7 +7271,7 @@ MonoBehaviour:
   - key: IndustrialMachine
     message: machines were built to replace effort, eventually they replaced people
       too..
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: e952dcf2ea6f8184baf22076b69bcee9, type: 3}
     worldPosition: {x: 0.73, y: 1.0535, z: 1.28}
     triggerRadius: 0.3
     displayDuration: 3
@@ -7150,35 +7279,35 @@ MonoBehaviour:
   - key: ShippingContainer
     message: the world learned how to move everything, except the weight of what
       it became
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: adb51a5ff1a4bb744a753039233b9db4, type: 3}
     worldPosition: {x: 4.01, y: 1.0535, z: 2.68}
     triggerRadius: 0.25
     displayDuration: 3
     triggeredThisSession: 0
   - key: Value
     message: value dissappears when no one's left to believe in it
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 4d37be4df94c67f4b8eec5c8c3345845, type: 3}
     worldPosition: {x: 1.72, y: 1.0535, z: 1.77}
     triggerRadius: 0.3
     displayDuration: 3
     triggeredThisSession: 0
   - key: FinalArtefact
     message: 'there was no single ending, only thousands of small choices... '
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: ee07748c051b97b40b1b0175072a3313, type: 3}
     worldPosition: {x: 1.98, y: 1.0535, z: 0.57}
     triggerRadius: 0.3
     displayDuration: 3
     triggeredThisSession: 0
   - key: NatureReclaim
     message: when we finally left... the world began again without us
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: e8df78869101e694ba6ca87abbd46ad4, type: 3}
     worldPosition: {x: 1.16, y: 1.0535, z: 3.11}
     triggerRadius: 0.3
     displayDuration: 3
     triggeredThisSession: 0
-  - key: FinalOverlook01
+  - key: FinalOverlook
     message: the desert kept everything, even the things we tried to forget
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: a070a88b17fde8841a94f846d0484e2a, type: 3}
     worldPosition: {x: 0.64, y: 1.0535, z: 3.75}
     triggerRadius: 0.3
     displayDuration: 3
@@ -8448,6 +8577,7 @@ GameObject:
   - component: {fileID: 676130397}
   - component: {fileID: 676130399}
   - component: {fileID: 676130398}
+  - component: {fileID: 676130400}
   m_Layer: 5
   m_Name: WinPanel
   m_TagString: Untagged
@@ -8514,6 +8644,103 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 676130396}
   m_CullTransparentMesh: 1
+--- !u!82 &676130400
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676130396}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: a18ec796aa924a54f8ecae364558a0af, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &686676899
 GameObject:
   m_ObjectHideFlags: 0
@@ -8660,7 +8887,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damping: {x: 0.1, y: 0.5, z: 0.3}
-  ShoulderOffset: {x: 0, y: -0.26, z: 0.2}
+  ShoulderOffset: {x: 0, y: -0.24, z: 0.2}
   VerticalArmLength: 0.34
   CameraSide: 0.9
   CameraDistance: 0.24
@@ -8725,7 +8952,7 @@ Transform:
   m_GameObject: {fileID: 713331263}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.99991995, z: 0, w: 0.012653411}
-  m_LocalPosition: {x: 4.3710117, y: 1.12, z: 4.649987}
+  m_LocalPosition: {x: 4.3710117, y: 1.14, z: 4.649987}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11889,18 +12116,20 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'W (Forward)
+  m_text: 'Shift (Accelerate)
+
+    W (Forward)
 
     A (Left)
 
     S (Back)
 
-    D (Right)
+    D
+    (Right)
 
     E (Interact)
 
-    Space
-    Bar (Jump)'
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6e5a780025868ea429e2d757e1d9a943, type: 2}
   m_sharedMaterial: {fileID: -3899025243981979287, guid: 6e5a780025868ea429e2d757e1d9a943, type: 2}
@@ -11909,8 +12138,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4282552232
-  m_fontColor: {r: 0.65882355, g: 0.5608164, b: 0.25882354, a: 1}
+    rgba: 4281427846
+  m_fontColor: {r: 0.5254902, g: 0.40510872, b: 0.19215684, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -11927,8 +12156,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25.5
-  m_fontSizeBase: 25.5
+  m_fontSize: 34.2
+  m_fontSizeBase: 34.2
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -18604,15 +18833,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.05
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.05
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.05
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18675,12 +18904,16 @@ PrefabInstance:
       value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4416926081852918490, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
+      propertyPath: FootstepAudioVolume
+      value: 0.015
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416926081852918490, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: GroundLayers.m_Bits
       value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 4416926081852918490, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: JumpForceMultiplier
-      value: 0.571
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4416926081852918491, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: m_Center.y
@@ -26488,3 +26721,4 @@ SceneRoots:
   - {fileID: 1423205959}
   - {fileID: 1488503004}
   - {fileID: 1394129382}
+  - {fileID: 125968908}
