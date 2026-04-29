@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using StarterAssets;
 
 public class NarrationManager : MonoBehaviour
 {
@@ -31,7 +32,7 @@ public class NarrationManager : MonoBehaviour
     public NarrationPoint[] narrationPoints;
 
     private Transform _player;
-    private PlayerController _playerController;
+    private ThirdPersonController _playerController;
     private bool _isPlaying;
 
     private void Start()
@@ -41,7 +42,7 @@ public class NarrationManager : MonoBehaviour
 #endif
 
         _player = GameObject.FindWithTag("Player").transform;
-        _playerController = _player.GetComponent<PlayerController>();
+        _playerController = _player.GetComponent<ThirdPersonController>();
 
         if (narrationText != null)
         {
@@ -78,11 +79,11 @@ public class NarrationManager : MonoBehaviour
     private IEnumerator PlayNarration(NarrationPoint point)
     {
         _isPlaying = true;
-        if (_playerController != null) _playerController.speedMultiplier = narrationSpeedMultiplier;
+        if (_playerController != null) _playerController.MoveSpeed *= narrationSpeedMultiplier;
 
         yield return StartCoroutine(ShowMessage(point));
 
-        if (_playerController != null) _playerController.speedMultiplier = 1f;
+        if (_playerController != null) _playerController.MoveSpeed /= narrationSpeedMultiplier;
         _isPlaying = false;
 
         yield return new WaitForSeconds(intervalBetweenNarrations);

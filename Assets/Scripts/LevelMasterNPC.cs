@@ -8,6 +8,7 @@ public class LevelMasterNPC : MonoBehaviour
 
     [Header("Win Settings")]
     public GameObject winPanel;
+    public Button winPanelCloseButton;
 
     [Header("Gate Settings")]
     public LevelGate gateToOpen;
@@ -20,36 +21,51 @@ public class LevelMasterNPC : MonoBehaviour
     public TMP_InputField codeInputField;
     public TextMeshProUGUI errorMessage;
     public TextMeshProUGUI successMessage;
+    public Button uiPanelCloseButton;
 
     private void Start()
     {
         uiPanel.SetActive(false);
         errorMessage.gameObject.SetActive(false);
         successMessage.gameObject.SetActive(false);
+
+        if (winPanelCloseButton != null)
+            winPanelCloseButton.onClick.AddListener(CloseWinPanel);
+
+        if (uiPanelCloseButton != null)
+            uiPanelCloseButton.onClick.AddListener(CloseUIPanel);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (!other.CompareTag("Player")) return;
 
-        // Wipe ALL listeners from previous NPCs before wiring this one
         submitButton.onClick.RemoveAllListeners();
         submitButton.onClick.AddListener(OnSubmitCode);
 
-        // Reset UI state fresh for this NPC
         codeInputField.text = "";
         errorMessage.gameObject.SetActive(false);
         successMessage.gameObject.SetActive(false);
-
         uiPanel.SetActive(true);
+
+        // Unlock cursor so player can click and type — movement still works
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (!other.CompareTag("Player")) return;
+        CloseUIPanel();
+    }
 
+    private void CloseUIPanel()
+    {
         uiPanel.SetActive(false);
         submitButton.onClick.RemoveAllListeners();
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     public void OnSubmitCode()
@@ -71,9 +87,23 @@ public class LevelMasterNPC : MonoBehaviour
     private void OpenGateAndClosePanel()
     {
         uiPanel.SetActive(false);
+
+        if (gateToOpen != null)
+            gateToOpen.Open();
+
         if (winPanel != null)
             winPanel.SetActive(true);
-        else
-            gateToOpen.Open();
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
+    private void CloseWinPanel()
+    {
+        if (winPanel != null)
+            winPanel.SetActive(false);
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }
