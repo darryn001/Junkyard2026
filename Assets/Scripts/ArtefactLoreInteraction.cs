@@ -23,6 +23,7 @@ public class ArtefactLoreInteraction : MonoBehaviour
     [Tooltip("Drag the TMP heading text inside THIS artefact's LorePanel.")]
     public TextMeshProUGUI artifactNameText;
 
+
     [Tooltip("Drag the TMP body text inside THIS artefact's LorePanel.")]
     public TextMeshProUGUI loreBodyText;
 
