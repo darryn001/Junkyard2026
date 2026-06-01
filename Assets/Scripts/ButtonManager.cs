@@ -30,7 +30,7 @@ public class ButtonManager : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("IntroVideo");
+        SceneManager.LoadScene("GameIntroduction");
     }
 
     public void LoadGameScene()
