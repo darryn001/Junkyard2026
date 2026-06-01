@@ -5808,8 +5808,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 1
-  m_Color: {r: 0.4188679, g: 0.4188679, b: 0.4188679, a: 0.39215687}
-  m_Intensity: 2
+  m_Color: {r: 0.381132, g: 0.37389854, b: 0.32719824, a: 0.21176471}
+  m_Intensity: 0.59
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -5852,7 +5852,7 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_ColorTemperature: 5537
+  m_ColorTemperature: 6500
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
@@ -8626,7 +8626,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 268901a8efea5624398438c1cd8b488f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 702fb80c5f0e2a840827de45e2233a65, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
