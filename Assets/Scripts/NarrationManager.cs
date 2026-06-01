@@ -31,15 +31,16 @@ public class NarrationManager : MonoBehaviour
     public float narrationSpeedMultiplier = 0.15f;
     public NarrationPoint[] narrationPoints;
 
+    [Header("Tutorial Reference")]
+    public TutorialManager tutorialManager;
+
     private Transform _player;
     private ThirdPersonController _playerController;
     private bool _isPlaying;
 
     private void Start()
     {
-#if UNITY_EDITOR
         ResetAllNarrations();
-#endif
 
         _player = GameObject.FindWithTag("Player").transform;
         _playerController = _player.GetComponent<ThirdPersonController>();
@@ -61,10 +62,12 @@ public class NarrationManager : MonoBehaviour
     {
         if (_player == null || _isPlaying) return;
 
+        // Wait for tutorial to finish before allowing narration triggers
+        if (tutorialManager != null && tutorialManager.IsPlaying) return;
+
         foreach (var point in narrationPoints)
         {
             if (point.triggeredThisSession) continue;
-            if (PlayerPrefs.GetInt(point.key, 0) == 1) continue;
 
             float dist = Vector3.Distance(_player.position, point.worldPosition);
             if (dist <= point.triggerRadius)
@@ -100,17 +103,14 @@ public class NarrationManager : MonoBehaviour
             audioSource.Play();
         }
 
-        // Typewriter
         foreach (char letter in point.message)
         {
             narrationText.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
 
-        // Hold
         yield return new WaitForSeconds(point.displayDuration);
 
-        // Fade Out
         float t = 1f;
         while (t > 0f)
         {
@@ -124,9 +124,6 @@ public class NarrationManager : MonoBehaviour
 
         SetTextAlpha(0f);
         narrationText.text = "";
-
-        PlayerPrefs.SetInt(point.key, 1);
-        PlayerPrefs.Save();
     }
 
     private void SetTextAlpha(float alpha)

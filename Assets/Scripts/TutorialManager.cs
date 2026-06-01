@@ -19,11 +19,11 @@ public class TutorialManager : MonoBehaviour
     public float intervalBetweenPrompts = 2f;
     public TutorialPrompt[] prompts;
 
+    public bool IsPlaying { get; private set; }
+
     private void Start()
     {
-#if UNITY_EDITOR
-        ResetAllPrompts(); // Always show prompts fresh during Editor playtesting
-#endif
+        ResetAllPrompts();
 
         if (tutorialText != null)
         {
@@ -38,20 +38,21 @@ public class TutorialManager : MonoBehaviour
 
     private IEnumerator PlayAllPrompts()
     {
+        IsPlaying = true;
+
         foreach (var prompt in prompts)
         {
-            if (PlayerPrefs.GetInt(prompt.key, 0) == 1) continue;
-
             yield return StartCoroutine(ShowPrompt(prompt));
             yield return new WaitForSeconds(intervalBetweenPrompts);
         }
+
+        IsPlaying = false;
     }
 
     private IEnumerator ShowPrompt(TutorialPrompt prompt)
     {
         tutorialText.text = prompt.message;
 
-        // Fade In
         float t = 0f;
         while (t < 1f)
         {
@@ -62,7 +63,6 @@ public class TutorialManager : MonoBehaviour
 
         yield return new WaitForSeconds(prompt.displayDuration);
 
-        // Fade Out
         t = 1f;
         while (t > 0f)
         {
@@ -73,9 +73,6 @@ public class TutorialManager : MonoBehaviour
 
         SetTextAlpha(0f);
         tutorialText.text = "";
-
-        PlayerPrefs.SetInt(prompt.key, 1);
-        PlayerPrefs.Save();
     }
 
     private void SetTextAlpha(float alpha)
